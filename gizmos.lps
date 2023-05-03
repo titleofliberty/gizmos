@@ -11,7 +11,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="26"/>
+        <UsageCount Value="30"/>
       </Unit>
       <Unit>
         <Filename Value="testform.pas"/>
@@ -21,7 +21,7 @@
         <ResourceBaseClass Value="Form"/>
         <TopLine Value="3"/>
         <CursorPos X="40" Y="16"/>
-        <UsageCount Value="26"/>
+        <UsageCount Value="30"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -30,81 +30,34 @@
         <UnitName Value="GizmoCalendar"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="86"/>
-        <CursorPos X="7" Y="103"/>
-        <UsageCount Value="12"/>
+        <TopLine Value="67"/>
+        <CursorPos X="36" Y="74"/>
+        <UsageCount Value="14"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="../../../fpcupdeluxe/lazarus/lcl/extctrls.pp"/>
         <UnitName Value="ExtCtrls"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="1051"/>
         <CursorPos X="3" Y="1065"/>
         <UsageCount Value="11"/>
-        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="../../../fpcupdeluxe/fpcsrc/rtl/objpas/classes/classesh.inc"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="2037"/>
         <CursorPos X="3" Y="1889"/>
         <UsageCount Value="11"/>
-        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="README.md"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="28">
-      <Position>
-        <Filename Value="testform.pas"/>
-      </Position>
-      <Position>
-        <Filename Value="testform.pas"/>
-        <Caret Line="17" Column="34"/>
-      </Position>
-      <Position>
-        <Filename Value="testform.pas"/>
-        <Caret Line="18" Column="34"/>
-      </Position>
-      <Position>
-        <Filename Value="testform.pas"/>
-        <Caret Line="17" Column="34"/>
-      </Position>
-      <Position>
-        <Filename Value="testform.pas"/>
-        <Caret Line="13" Column="45"/>
-      </Position>
-      <Position>
-        <Filename Value="gizmocalendar.pas"/>
-        <Caret Line="21" Column="36" TopLine="4"/>
-      </Position>
-      <Position>
-        <Filename Value="gizmocalendar.pas"/>
-        <Caret Line="27" Column="23" TopLine="4"/>
-      </Position>
-      <Position>
-        <Filename Value="gizmocalendar.pas"/>
-        <Caret Line="86" Column="18" TopLine="61"/>
-      </Position>
-      <Position>
-        <Filename Value="testform.pas"/>
-        <Caret Line="13" Column="39"/>
-      </Position>
-      <Position>
-        <Filename Value="testform.pas"/>
-        <Caret Line="9" Column="50"/>
-      </Position>
-      <Position>
-        <Filename Value="gizmocalendar.pas"/>
-        <Caret Line="82" TopLine="61"/>
-      </Position>
-      <Position>
-        <Filename Value="testform.pas"/>
-        <Caret Line="13" Column="45"/>
-      </Position>
-      <Position>
-        <Filename Value="testform.pas"/>
-        <Caret Line="15" Column="32"/>
-      </Position>
+    <JumpHistory HistoryIndex="29">
       <Position>
         <Filename Value="testform.pas"/>
         <Caret Line="16" Column="42"/>
@@ -138,10 +91,6 @@
         <Caret Line="14" Column="22" TopLine="4"/>
       </Position>
       <Position>
-        <Filename Value="../../../fpcupdeluxe/lazarus/lcl/extctrls.pp"/>
-        <Caret Line="1110" Column="3" TopLine="1096"/>
-      </Position>
-      <Position>
         <Filename Value="gizmocalendar.pas"/>
         <Caret Line="14" Column="40" TopLine="4"/>
       </Position>
@@ -168,6 +117,66 @@
       <Position>
         <Filename Value="gizmocalendar.pas"/>
         <Caret Line="24" Column="66" TopLine="20"/>
+      </Position>
+      <Position>
+        <Filename Value="gizmocalendar.pas"/>
+        <Caret Line="103" Column="7" TopLine="86"/>
+      </Position>
+      <Position>
+        <Filename Value="gizmocalendar.pas"/>
+        <Caret Line="26" Column="67" TopLine="10"/>
+      </Position>
+      <Position>
+        <Filename Value="gizmocalendar.pas"/>
+        <Caret Line="108" Column="34" TopLine="98"/>
+      </Position>
+      <Position>
+        <Filename Value="gizmocalendar.pas"/>
+        <Caret Line="27" Column="33" TopLine="12"/>
+      </Position>
+      <Position>
+        <Filename Value="gizmocalendar.pas"/>
+        <Caret Line="140" Column="34" TopLine="116"/>
+      </Position>
+      <Position>
+        <Filename Value="gizmocalendar.pas"/>
+        <Caret Line="31" Column="21" TopLine="20"/>
+      </Position>
+      <Position>
+        <Filename Value="gizmocalendar.pas"/>
+        <Caret Line="99" Column="27" TopLine="90"/>
+      </Position>
+      <Position>
+        <Filename Value="gizmocalendar.pas"/>
+        <Caret Line="104" Column="112" TopLine="82"/>
+      </Position>
+      <Position>
+        <Filename Value="gizmocalendar.pas"/>
+        <Caret Line="107" Column="99" TopLine="93"/>
+      </Position>
+      <Position>
+        <Filename Value="gizmocalendar.pas"/>
+        <Caret Line="28" Column="87" TopLine="14"/>
+      </Position>
+      <Position>
+        <Filename Value="gizmocalendar.pas"/>
+        <Caret Line="170" Column="14" TopLine="142"/>
+      </Position>
+      <Position>
+        <Filename Value="gizmocalendar.pas"/>
+        <Caret Line="138" TopLine="111"/>
+      </Position>
+      <Position>
+        <Filename Value="gizmocalendar.pas"/>
+        <Caret Line="18" Column="19" TopLine="9"/>
+      </Position>
+      <Position>
+        <Filename Value="gizmocalendar.pas"/>
+        <Caret Line="165" TopLine="145"/>
+      </Position>
+      <Position>
+        <Filename Value="gizmocalendar.pas"/>
+        <Caret Line="169" TopLine="145"/>
       </Position>
     </JumpHistory>
     <RunParams>

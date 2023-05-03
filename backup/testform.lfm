@@ -1,18 +1,18 @@
 object frmTest: TfrmTest
   Left = 378
-  Height = 414
+  Height = 293
   Top = 177
-  Width = 464
+  Width = 407
   Caption = 'Gizmos Test Form'
-  ClientHeight = 414
-  ClientWidth = 464
+  ClientHeight = 293
+  ClientWidth = 407
   LCLVersion = '2.2.6.0'
   object GizmoCalendar1: TGizmoCalendar
-    Left = 0
-    Height = 414
-    Top = 0
-    Width = 464
+    Left = 16
+    Height = 270
+    Top = 8
+    Width = 379
     Value = 45047
-    Align = alClient
+    Anchors = [akTop, akLeft, akRight, akBottom]
   end
 end
