@@ -8,11 +8,12 @@ object frmTest: TfrmTest
   ClientWidth = 394
   LCLVersion = '2.2.6.0'
   object GizmoCalendar1: TGizmoCalendar
-    Left = 16
-    Height = 305
-    Top = 8
-    Width = 366
-    Value = 45047
+    Left = 67
+    Height = 264
+    Top = 27
+    Width = 255
+    Value = 45081.7087268519
     Anchors = [akTop, akLeft, akRight, akBottom]
+    Font.Height = -24
   end
 end
