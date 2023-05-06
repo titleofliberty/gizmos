@@ -4,37 +4,5 @@ object frmTest: TfrmTest
   Top = 170
   Width = 594
   Caption = 'Gizmos Test Form'
-  ClientHeight = 400
-  ClientWidth = 594
-  OnCreate = FormCreate
   LCLVersion = '2.2.6.0'
-  object Panel1: TPanel
-    Left = 119
-    Height = 208
-    Top = 44
-    Width = 289
-    BevelOuter = bvNone
-    Caption = 'Panel1'
-    Font.Color = clBlack
-    ParentFont = False
-    TabOrder = 0
-  end
-  object Button1: TButton
-    Left = 152
-    Height = 25
-    Top = 272
-    Width = 75
-    Caption = 'Previous'
-    OnClick = Button1Click
-    TabOrder = 1
-  end
-  object Button2: TButton
-    Left = 301
-    Height = 25
-    Top = 272
-    Width = 75
-    Caption = 'Next'
-    OnClick = Button2Click
-    TabOrder = 2
-  end
 end

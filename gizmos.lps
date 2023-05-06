@@ -19,9 +19,8 @@
         <ComponentName Value="frmTest"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
-        <TopLine Value="3"/>
-        <CursorPos X="3" Y="20"/>
+        <TopLine Value="2"/>
+        <CursorPos X="65" Y="8"/>
         <UsageCount Value="52"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -29,6 +28,7 @@
       <Unit>
         <Filename Value="gizmocalendar.pas"/>
         <UnitName Value="GizmoCalendar"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <TopLine Value="19"/>
         <CursorPos X="39" Y="35"/>

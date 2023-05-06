@@ -11,7 +11,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="48"/>
+        <UsageCount Value="52"/>
       </Unit>
       <Unit>
         <Filename Value="testform.pas"/>
@@ -20,9 +20,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="16"/>
-        <CursorPos X="3" Y="23"/>
-        <UsageCount Value="48"/>
+        <TopLine Value="3"/>
+        <CursorPos X="3" Y="20"/>
+        <UsageCount Value="52"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -33,7 +33,7 @@
         <TopLine Value="19"/>
         <CursorPos X="39" Y="35"/>
         <FoldState Value=" T3iH06213 PiLkY0K"/>
-        <UsageCount Value="18"/>
+        <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -42,19 +42,19 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="610"/>
         <CursorPos X="3" Y="1065"/>
-        <UsageCount Value="11"/>
+        <UsageCount Value="10"/>
       </Unit>
       <Unit>
         <Filename Value="../../../fpcupdeluxe/fpcsrc/rtl/objpas/classes/classesh.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="1968"/>
         <CursorPos X="3" Y="1889"/>
-        <UsageCount Value="11"/>
+        <UsageCount Value="10"/>
       </Unit>
       <Unit>
         <Filename Value="README.md"/>
         <EditorIndex Value="-1"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
@@ -64,7 +64,7 @@
         <TopLine Value="2"/>
         <CursorPos Y="272"/>
         <FoldState Value=" T4602 T7EFS1 PNWG T3iW049 piZjI0y5 PKj10 T1iX03B"/>
-        <UsageCount Value="14"/>
+        <UsageCount Value="13"/>
       </Unit>
       <Unit>
         <Filename Value="../../../fpcupdeluxe/lazarus/lcl/stdctrls.pp"/>
@@ -72,7 +72,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="1610"/>
         <CursorPos X="3" Y="1621"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="../../../fpcupdeluxe/lazarus/lcl/controls.pp"/>
@@ -80,14 +80,14 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="1709"/>
         <CursorPos X="14" Y="1721"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="../../../fpcupdeluxe/lazarus/lcl/include/control.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="3579"/>
         <CursorPos Y="3594"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="../../../fpcupdeluxe/lazarus/lcl/graphics.pp"/>
@@ -95,7 +95,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="498"/>
         <CursorPos X="3" Y="488"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="../../../fpcupdeluxe/fpcsrc/rtl/objpas/types.pp"/>
@@ -103,28 +103,28 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="53"/>
         <CursorPos X="3" Y="67"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="../../../fpcupdeluxe/fpcsrc/packages/fcl-base/src/contnrs.pp"/>
         <UnitName Value="Contnrs"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="280"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="../../../fpcupdeluxe/fpcsrc/rtl/inc/systemh.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="458"/>
         <CursorPos X="3" Y="472"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="htmlcolors.pas"/>
         <EditorIndex Value="2"/>
         <TopLine Value="3"/>
         <CursorPos Y="9"/>
-        <UsageCount Value="11"/>
+        <UsageCount Value="13"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -133,7 +133,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="154"/>
         <CursorPos Y="182"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">

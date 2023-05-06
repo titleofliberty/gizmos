@@ -5,7 +5,7 @@ unit testform;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, EditBtn, Arrow,
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, EditBtn,
   StdCtrls, ExtCtrls, GizmoCalendar, SimpleCard, Types, Contnrs, DateUtils,
   htmlcolors;
 
