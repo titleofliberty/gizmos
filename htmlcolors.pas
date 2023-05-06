@@ -1,0 +1,164 @@
+unit htmlcolors;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils, Graphics;
+
+const
+  clHTMLAliceBlue            = TColor($FFF8F0);
+  clHTMLAntiqueWhite         = TColor($D7EBFA);
+  clHTMLAqua                 = TColor($FFFF00);
+  clHTMLAquamarine           = TColor($D4FF7F);
+  clHTMLAzure                = TColor($FFFFF0);
+  clHTMLBeige                = TColor($DCF5F5);
+  clHTMLBisque               = TColor($C4E4FF);
+  clHTMLBlack                = TColor($000000);
+  clHTMLBlanchedAlmond       = TColor($CDEBFF);
+  clHTMLBlue                 = TColor($FF0000);
+  clHTMLBlueViolet           = TColor($E22B8A);
+  clHTMLBrown                = TColor($2A2AA5);
+  clHTMLBurlyWood            = TColor($87B8DE);
+  clHTMLCadetBlue            = TColor($A09E5F);
+  clHTMLChartreuse           = TColor($00FF7F);
+  clHTMLChocolate            = TColor($1E69D2);
+  clHTMLCoral                = TColor($507FFF);
+  clHTMLCornflowerBlue       = TColor($ED9564);
+  clHTMLCornsilk             = TColor($DCF8FF);
+  clHTMLCrimson              = TColor($3C14DC);
+  clHTMLCyan                 = TColor($FFFF00);
+  clHTMLDarkBlue             = TColor($8B0000);
+  clHTMLDarkCyan             = TColor($8B8B00);
+  clHTMLDarkGoldenRod        = TColor($0B86B8);
+  clHTMLDarkGray             = TColor($A9A9A9);
+  clHTMLDarkGrey             = TColor($A9A9A9);
+  clHTMLDarkGreen            = TColor($006400);
+  clHTMLDarkKhaki            = TColor($6BB7BD);
+  clHTMLDarkMagenta          = TColor($8B008B);
+  clHTMLDarkOliveGreen       = TColor($2F6B55);
+  clHTMLDarkOrange           = TColor($008CFF);
+  clHTMLDarkOrchid           = TColor($CC3299);
+  clHTMLDarkRed              = TColor($00008B);
+  clHTMLDarkSalmon           = TColor($7A96E9);
+  clHTMLDarkSeaGreen         = TColor($8FBC8F);
+  clHTMLDarkSlateBlue        = TColor($8B3D48);
+  clHTMLDarkSlateGray        = TColor($4F4F2F);
+  clHTMLDarkSlateGrey        = TColor($4F4F2F);
+  clHTMLDarkTurquoise        = TColor($D1CE00);
+  clHTMLDarkViolet           = TColor($D30094);
+  clHTMLDeepPink             = TColor($9314FF);
+  clHTMLDeepSkyBlue          = TColor($FFBF00);
+  clHTMLDimGray              = TColor($696969);
+  clHTMLDimGrey              = TColor($696969);
+  clHTMLDodgerBlue           = TColor($FF901E);
+  clHTMLFireBrick            = TColor($2222B2);
+  clHTMLFloralWhite          = TColor($F0FAFF);
+  clHTMLForestGreen          = TColor($228B22);
+  clHTMLFuchsia              = TColor($FF00FF);
+  clHTMLGainsboro            = TColor($DCDCDC);
+  clHTMLGhostWhite           = TColor($FFF8F8);
+  clHTMLGold                 = TColor($00D7FF);
+  clHTMLGoldenRod            = TColor($20A5DA);
+  clHTMLGray                 = TColor($808080);
+  clHTMLGreen                = TColor($008000);
+  clHTMLGreenYellow          = TColor($2FFFAD);
+  clHTMLGrey                 = TColor($808080);
+  clHTMLHoneyDew             = TColor($F0FFF0);
+  clHTMLHotPink              = TColor($B469FF);
+  clHTMLIndianRed            = TColor($5C5CCD);
+  clHTMLIndigo               = TColor($82004B);
+  clHTMLIvory                = TColor($F0FFFF);
+  clHTMLKhaki                = TColor($8CE6F0);
+  clHTMLLavender             = TColor($FAE6E6);
+  clHTMLLavenderBlush        = TColor($F5F0FF);
+  clHTMLLawnGreen            = TColor($00FC7C);
+  clHTMLLemonChiffon         = TColor($CDFAFF);
+  clHTMLLightBlue            = TColor($E6D8AD);
+  clHTMLLightCoral           = TColor($8080F0);
+  clHTMLLightCyan            = TColor($FFFFE0);
+  clHTMLLightGoldenRodYellow = TColor($D2FAFA);
+  clHTMLLightGray            = TColor($D3D3D3);
+  clHTMLLightGreen           = TColor($90EE90);
+  clHTMLLightGrey            = TColor($D3D3D3);
+  clHTMLLightPink            = TColor($C1B6FF);
+  clHTMLLightSalmon          = TColor($7AA0FF);
+  clHTMLLightSeaGreen        = TColor($AAB220);
+  clHTMLLightSkyBlue         = TColor($FACE87);
+  clHTMLLightSlateGray       = TColor($998877);
+  clHTMLLightSteelBlue       = TColor($DEC4B0);
+  clHTMLLightYellow          = TColor($E0FFFF);
+  clHTMLLime                 = TColor($00FF00);
+  clHTMLLimeGreen            = TColor($32CD32);
+  clHTMLLinen                = TColor($E6F0FA);
+  clHTMLMagenta              = TColor($FF00FF);
+  clHTMLMaroon               = TColor($000080);
+  clHTMLMediumAquaMarine     = TColor($AACD66);
+  clHTMLMediumBlue           = TColor($CD0000);
+  clHTMLMediumOrchid         = TColor($D355BA);
+  clHTMLMediumPurple         = TColor($DB7093);
+  clHTMLMediumSeaGreen       = TColor($71B33C);
+  clHTMLMediumSlateBlue      = TColor($EE687B);
+  clHTMLMediumSpringGreen    = TColor($9AFA00);
+  clHTMLMediumTurquoise      = TColor($CCD148);
+  clHTMLMediumVioletRed      = TColor($8515C7);
+  clHTMLMidnightBlue         = TColor($701919);
+  clHTMLMintCream            = TColor($FAFFF5);
+  clHTMLMistyRose            = TColor($E1E4FF);
+  clHTMLMoccasin             = TColor($B5E4FF);
+  clHTMLNavajoWhite          = TColor($ADDEFF);
+  clHTMLNavy                 = TColor($800000);
+  clHTMLOldLace              = TColor($E6F5FD);
+  clHTMLOlive                = TColor($008080);
+  clHTMLOliveDrab            = TColor($238E6B);
+  clHTMLOrange               = TColor($00A5FF);
+  clHTMLOrangeRed            = TColor($0045FF);
+  clHTMLOrchid               = TColor($D670DA);
+  clHTMLPaleGoldenRod        = TColor($AAE8EE);
+  clHTMLPaleGreen            = TColor($98FB98);
+  clHTMLPaleTurquoise        = TColor($EEEEAF);
+  clHTMLPaleVioletRed        = TColor($9370DB);
+  clHTMLPapayaWhip           = TColor($D5EFFF);
+  clHTMLPeachPuff            = TColor($B9DAFF);
+  clHTMLPeru                 = TColor($3F85CD);
+  clHTMLPink                 = TColor($CBC0FF);
+  clHTMLPlum                 = TColor($DDA0DD);
+  clHTMLPowderBlue           = TColor($E6E0B0);
+  clHTMLPurple               = TColor($800080);
+  clHTMLRebeccaPurple        = TColor($993366);
+  clHTMLRed                  = TColor($0000FF);
+  clHTMLRosyBrown            = TColor($8F8FBC);
+  clHTMLRoyalBlue            = TColor($E16941);
+  clHTMLSaddleBrown          = TColor($13458B);
+  clHTMLSalmon               = TColor($7280FA);
+  clHTMLSandyBrown           = TColor($60A4F4);
+  clHTMLSeaGreen             = TColor($578B2E);
+  clHTMLSeaShell             = TColor($EEF5FF);
+  clHTMLSienna               = TColor($2D52A0);
+  clHTMLSilver               = TColor($C0C0C0);
+  clHTMLSkyBlue              = TColor($EBCE87);
+  clHTMLSlateBlue            = TColor($CD5A6A);
+  clHTMLSlateGray            = TColor($908070);
+  clHTMLSlateGrey            = TColor($908070);
+  clHTMLSnow                 = TColor($FAFAFF);
+  clHTMLSpringGreen          = TColor($7FFF00);
+  clHTMLSteelBlue            = TColor($B48246);
+  clHTMLTan                  = TColor($8CB4D2);
+  clHTMLTeal                 = TColor($808000);
+  clHTMLThistle              = TColor($D8BFD8);
+  clHTMLTomato               = TColor($4763FF);
+  clHTMLTurquoise            = TColor($D0E040);
+  clHTMLViolet               = TColor($EE82EE);
+  clHTMLWhite                = TColor($FFFFFF);
+  clHTMLWheat                = TColor($B3DEF5);
+  clHTMLWhiteSmoke           = TColor($F5F5F5);
+  clHTMLYellow               = TColor($00FFFF);
+  clHTMLYellowGreen          = TColor($32CD9A);
+
+implementation
+
+initialization
+
+end.
+

@@ -6,7 +6,7 @@
     <CompilerOptions>
       <Version Value="11"/>
       <SearchPaths>
-        <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)/"/>
+        <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
       </SearchPaths>
     </CompilerOptions>
     <Files>
@@ -14,6 +14,15 @@
         <Filename Value="gizmocalendar.pas"/>
         <HasRegisterProc Value="True"/>
         <UnitName Value="GizmoCalendar"/>
+      </Item>
+      <Item>
+        <Filename Value="simplecard.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="SimpleCard"/>
+      </Item>
+      <Item>
+        <Filename Value="htmlcolors.pas"/>
+        <UnitName Value="htmlcolors"/>
       </Item>
     </Files>
     <RequiredPkgs>

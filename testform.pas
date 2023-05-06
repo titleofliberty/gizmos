@@ -6,14 +6,14 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, EditBtn, Arrow,
-  StdCtrls, ExtCtrls, GizmoCalendar;
+  StdCtrls, ExtCtrls, GizmoCalendar, SimpleCard, Types, Contnrs, DateUtils,
+  htmlcolors;
 
 type
 
   { TfrmTest }
 
   TfrmTest = class(TForm)
-    GizmoCalendar1: TGizmoCalendar;
   private
 
   public

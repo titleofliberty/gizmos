@@ -1,18 +1,40 @@
 object frmTest: TfrmTest
-  Left = 378
-  Height = 328
-  Top = 177
-  Width = 394
+  Left = 376
+  Height = 400
+  Top = 170
+  Width = 594
   Caption = 'Gizmos Test Form'
-  ClientHeight = 328
-  ClientWidth = 394
+  ClientHeight = 400
+  ClientWidth = 594
+  OnCreate = FormCreate
   LCLVersion = '2.2.6.0'
-  object GizmoCalendar1: TGizmoCalendar
-    Left = 67
-    Height = 264
-    Top = 27
-    Width = 255
-    Value = 45081.7087268519
-    Anchors = [akTop, akLeft, akRight, akBottom]
+  object Panel1: TPanel
+    Left = 119
+    Height = 208
+    Top = 44
+    Width = 289
+    BevelOuter = bvNone
+    Caption = 'Panel1'
+    Font.Color = clBlack
+    ParentFont = False
+    TabOrder = 0
+  end
+  object Button1: TButton
+    Left = 152
+    Height = 25
+    Top = 272
+    Width = 75
+    Caption = 'Previous'
+    OnClick = Button1Click
+    TabOrder = 1
+  end
+  object Button2: TButton
+    Left = 301
+    Height = 25
+    Top = 272
+    Width = 75
+    Caption = 'Next'
+    OnClick = Button2Click
+    TabOrder = 2
   end
 end

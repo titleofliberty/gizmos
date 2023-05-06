@@ -23,25 +23,27 @@ type
   private
     FMousePos : TPoint;
     FMthPrev, FMthNext: TRect;
+    FOnChange: TNotifyEvent;
     FYrPrev, FYrNext: TRect;
     FGrid : array [0..6, 0..7] of TCell;
     FDate: TDateTime;
     procedure SetDate(AValue: TDateTime);
     procedure RenderArrow(ARect: TRect; ADirection: TArrowDirection);
-    procedure TextCentered(ARect: TRect; AText: String);
   protected
 
   public
+    HighlightDates: array of TDateTime;
     constructor Create(TheOwner: TComponent); override;
     procedure Paint; override;
     procedure MouseMove(Shift: TShiftState; X, Y: Integer); override;
     procedure MouseLeave; override;
     procedure MouseUp(Button: TMouseButton; Shift: TShiftState; X, Y: Integer); override;
   published
-    property Value: TDateTime read FDate write SetDate;
     property Align;
     property Anchors;
     property Font;
+    property Value: TDateTime read FDate write SetDate;
+    property OnChange: TNotifyEvent read FOnChange write FOnChange;
   end;
 
 procedure Register;
@@ -61,6 +63,7 @@ begin
   if FDate = AValue then Exit;
   FDate := AValue;
   Invalidate;
+  if Assigned(FOnChange) then FOnChange(Self);
 end;
 
 procedure TGizmoCalendar.RenderArrow(ARect: TRect; ADirection: TArrowDirection);
@@ -70,23 +73,13 @@ begin
   Self.Canvas.Brush.Style := bsSolid;
 
   if (ADirection = adLeft) then
-    //Self.Canvas.Polygon([Point(ARect.Left, ARect.CenterPoint.Y), Point(ARect.Right, ARect.Top), ARect.BottomRight])
-    Self.Canvas.Polygon([Point(ARect.Left, ARect.CenterPoint.Y), Point(ARect.Right, ARect.Top), Point(ARect.Right, ARect.Bottom)])
+    Self.Canvas.Polygon([Point(ARect.Left, ARect.CenterPoint.Y), Point(ARect.Right, ARect.Top), ARect.BottomRight])
   else if (ADirection = adRight) then
     Self.Canvas.Polygon([ARect.TopLeft, Point(ARect.Right, ARect.Top + (ARect.Height div 2)), Point(ARect.Left, ARect.Bottom)]);
 
   Self.Canvas.Brush.Color := clDefault;
   Self.Canvas.Brush.Style := bsClear;
 
-end;
-
-procedure TGizmoCalendar.TextCentered(ARect: TRect; AText: String);
-var
-  w, h: Integer;
-begin
-  w := Self.Canvas.TextWidth(AText);
-  h := Self.Canvas.TextHeight(AText);
-  Self.Canvas.TextOut(ARect.Left + ((ARect.Width-w) div 2), ARect.Top + ((ARect.Height-h) div 2), AText);
 end;
 
 constructor TGizmoCalendar.Create(TheOwner: TComponent);
@@ -100,15 +93,16 @@ end;
 procedure TGizmoCalendar.Paint;
 var
   stepdate: TDateTime;
-  x, y: integer;
+  x, y, i: integer;
   rowh, colw: integer;
-  mth, yr: TRect;
+  mth, yr, hl: TRect;
   ts : TTextStyle;
+  cl : TColor;
 begin
   inherited Paint;
 
-  Self.Canvas.Font.Name := Self.Font.Name;
-  Self.Canvas.Font.Size := Self.Font.Size;
+  Canvas.Font.Name := Self.Font.Name;
+  Canvas.Font.Size := Self.Font.Size;
 
   stepdate := StartOfTheWeek(StartOfTheMonth(FDate));
   if DayOfWeek(stepdate) < DateUtils.DaySunday then
@@ -117,13 +111,13 @@ begin
   rowh := Self.Height div 8;
   colw := Self.Width div 7;
 
-  Self.Canvas.Brush.Color := clDefault;
-  Self.Canvas.FillRect(0, 0, Width, Height);
-  Self.Canvas.Brush.Style := bsClear;
+  Canvas.Brush.Color := clDefault;
+  Canvas.FillRect(0, 0, Width, Height);
+  Canvas.Brush.Style := bsClear;
 
-  Self.Canvas.Font.Color := clWindowText;
-  Self.Canvas.Pen.Color := clWindowText;
-  Self.Canvas.Pen.Style := psSolid;
+  Canvas.Font.Color := clWindowText;
+  Canvas.Pen.Color := clWindowText;
+  Canvas.Pen.Style := psSolid;
   for y := 0 to 7 do
     for x := 0 to 6 do
     begin
@@ -132,14 +126,15 @@ begin
 
   ts.Alignment := taCenter;
   ts.Layout := tlCenter;
+  ts.SystemFont := false;
 
   mth := TRect.Union(FGrid[0,0].Rect, FGrid[1,0].Rect);
   yr := TRect.Union(FGrid[5,0].Rect, FGrid[6,0].Rect);
 
   FMthPrev := TRect.Create(mth.Left, mth.Top, 7, 14);
   FMthNext := TRect.Create(mth.Right - 7, mth.Top, mth.Right, 14);
-  FYrPrev := TRect.Create(yr.Left, yr.Top, 7, 14);
-  FYrNext := TRect.Create(yr.Right - 7, yr.Top, yr.Right, 14);
+  FYrPrev := TRect.Create(yr.Left, yr.Top, yr.Left + 7, yr.Top + 14);
+  FYrNext := TRect.Create(yr.Right - 7, yr.Top, yr.Right, yr.Top + 14);
 
   FMthPrev.Offset(0, (mth.Height - FMthPrev.Height) div 2);
   FMthNext.Offset(0, (mth.Height - FMthNext.Height) div 2);
@@ -151,17 +146,16 @@ begin
   RenderArrow(FYrPrev, adLeft);
   RenderArrow(FYrNext, adRight);
 
+  Canvas.TextRect(mth, mth.Left, mth.Top, FormatDateTime('mmmm', FDate), ts);
+  Canvas.TextRect(yr, yr.Left, yr.Top, FormatDateTime('yyyy', FDate), ts);
 
-  TextCentered(mth, FormatDateTime('mmmm', FDate));
-  TextCentered(yr, FormatDateTime('yyyy', FDate));
-
-  TextCentered(FGrid[0,1].Rect, 'Sun');
-  TextCentered(FGrid[1,1].Rect, 'Mon');
-  TextCentered(FGrid[2,1].Rect, 'Tue');
-  TextCentered(FGrid[3,1].Rect, 'Wed');
-  TextCentered(FGrid[4,1].Rect, 'Thu');
-  TextCentered(FGrid[5,1].Rect, 'Fri');
-  TextCentered(FGrid[6,1].Rect, 'Sat');
+  Canvas.TextRect(FGrid[0,1].Rect, FGrid[0,1].Rect.Left, FGrid[0,1].Rect.Top, 'Sun', ts);
+  Canvas.TextRect(FGrid[1,1].Rect, FGrid[1,1].Rect.Left, FGrid[1,1].Rect.Top, 'Mon', ts);
+  Canvas.TextRect(FGrid[2,1].Rect, FGrid[2,1].Rect.Left, FGrid[2,1].Rect.Top, 'Tue', ts);
+  Canvas.TextRect(FGrid[3,1].Rect, FGrid[3,1].Rect.Left, FGrid[3,1].Rect.Top, 'Wed', ts);
+  Canvas.TextRect(FGrid[4,1].Rect, FGrid[4,1].Rect.Left, FGrid[4,1].Rect.Top, 'Thu', ts);
+  Canvas.TextRect(FGrid[5,1].Rect, FGrid[5,1].Rect.Left, FGrid[5,1].Rect.Top, 'Fri', ts);
+  Canvas.TextRect(FGrid[6,1].Rect, FGrid[6,1].Rect.Left, FGrid[6,1].Rect.Top, 'Sat', ts);
 
   for y := 2 to 7 do
     for x := 0 to 6 do
@@ -170,21 +164,30 @@ begin
 
       if PtInRect(FGrid[x,y].Rect, FMousePos) then
       begin
-        Self.Canvas.Brush.Style := bsSolid;
-        Self.Canvas.Brush.Color := clHighlight;
-        Self.Canvas.FillRect(FGrid[x,y].Rect);
-        Self.Canvas.Font.Color := clHighlightText;
-        Self.Canvas.Brush.Color := clDefault;
-        Self.Canvas.Brush.Style := bsClear;
+        Canvas.Brush.Style := bsSolid;
+        Canvas.Brush.Color := clHighlight;
+        Canvas.FillRect(FGrid[x,y].Rect);
+        Canvas.Font.Color := clHighlightText;
+        Canvas.Brush.Color := clDefault;
+        Canvas.Brush.Style := bsClear;
       end
       else if (MonthOf(FDate) = MonthOf(stepdate)) then
-        Self.Canvas.Font.Color := clWindowText
+        Canvas.Font.Color := clWindowText
       else
-        Self.Canvas.Font.Color := clGrayText;
+        Canvas.Font.Color := clGrayText;
+
+      for i := low(HighlightDates) to high(HighlightDates) do
+        if (stepdate = HighlightDates[i]) then
+        begin
+          hl := TRect.Create(FGrid[x,y].Rect.Left + 1, FGrid[x,y].Rect.Bottom - 3, FGrid[x,y].Rect.Right - 1, FGrid[x,y].Rect.Bottom - 1);
+          Canvas.Brush.Color := clBlue;
+          Canvas.FillRect(hl);
+        end;
 
       if (CompareDate(FDate, FGrid[x,y].Date) = 0) then
-        Self.Canvas.Rectangle(FGrid[x,y].Rect);
-      TextCentered(FGrid[x,y].Rect, FormatDateTime('d', stepdate));
+        Canvas.Rectangle(FGrid[x,y].Rect);
+
+      Canvas.TextRect(FGrid[x,y].Rect, FGrid[x,y].Rect.Left, FGrid[x,y].Rect.Top, FormatDateTime('d', stepdate), ts);
       stepdate := IncDay(stepdate, 1);
     end;
 
@@ -195,6 +198,18 @@ begin
   inherited MouseMove(Shift, X, Y);
 
   FMousePos := TPoint.Create(X, Y);
+
+  if PtInRect(FMthPrev, FMousePos) then
+    Cursor := crHandPoint
+  else if PtInRect(FMthNext, FMousePos) then
+    Cursor := crHandPoint
+  else if PtInRect(FYrPrev, FMousePos) then
+    Cursor := crHandPoint
+  else if PtInRect(FYrNext, FMousePos) then
+    Cursor := crHandPoint
+  else
+    Cursor := crDefault;
+
   Invalidate;
 end;
 
