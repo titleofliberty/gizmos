@@ -6,13 +6,13 @@ object frmTest: TfrmTest
   Caption = 'Gizmos Test Form'
   ClientHeight = 400
   ClientWidth = 594
+  OnCreate = FormCreate
   LCLVersion = '2.2.6.0'
   object GizmoCalendar1: TGizmoCalendar
-    Left = 120
-    Height = 300
-    Top = 32
-    Width = 300
-    Anchors = [akTop, akLeft, akRight, akBottom]
-    Value = 45054.4387643171
+    Left = 109
+    Height = 339
+    Top = 38
+    Width = 397
+    Value = 45054.7674698264
   end
 end

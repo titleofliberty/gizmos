@@ -19,8 +19,9 @@
         <ComponentName Value="frmTest"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <TopLine Value="3"/>
-        <CursorPos X="16" Y="29"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="23"/>
+        <CursorPos X="13" Y="39"/>
         <UsageCount Value="58"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -28,11 +29,12 @@
       <Unit>
         <Filename Value="gizmocalendar.pas"/>
         <UnitName Value="GizmoCalendar"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="35"/>
-        <CursorPos X="68" Y="44"/>
-        <FoldState Value=" T3iM06313 PiTl50;"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="170"/>
+        <CursorPos X="41" Y="195"/>
+        <FoldState Value=" T3iM06223 PiKl60j"/>
         <UsageCount Value="23"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="../../../fpcupdeluxe/lazarus/lcl/extctrls.pp"/>
@@ -57,13 +59,11 @@
       </Unit>
       <Unit>
         <Filename Value="gizmosimplecard.pas"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="1"/>
-        <TopLine Value="46"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="44"/>
         <CursorPos X="12" Y="78"/>
         <FoldState Value=" T4602 T7EFS1 PNWL T3ic059 pk4kV044 PGP0o"/>
         <UsageCount Value="12"/>
-        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="../../../fpcupdeluxe/lazarus/lcl/stdctrls.pp"/>
@@ -133,8 +133,15 @@
         <CursorPos Y="182"/>
         <UsageCount Value="8"/>
       </Unit>
+      <Unit>
+        <Filename Value="gizmosimplecard_icon.lrs"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="78"/>
+        <CursorPos X="29" Y="106"/>
+        <UsageCount Value="10"/>
+      </Unit>
     </Units>
-    <JumpHistory HistoryIndex="10">
+    <JumpHistory HistoryIndex="19">
       <Position>
         <Filename Value="testform.pas"/>
         <Caret Line="34" Column="24" TopLine="10"/>
@@ -176,8 +183,44 @@
         <Caret Line="29" Column="16" TopLine="3"/>
       </Position>
       <Position>
-        <Filename Value="gizmosimplecard.pas"/>
-        <Caret Line="260" Column="17" TopLine="96"/>
+        <Filename Value="gizmocalendar.pas"/>
+        <Caret Line="26" Column="23" TopLine="13"/>
+      </Position>
+      <Position>
+        <Filename Value="gizmocalendar.pas"/>
+        <Caret Line="35" Column="42" TopLine="21"/>
+      </Position>
+      <Position>
+        <Filename Value="gizmocalendar.pas"/>
+        <Caret Line="44" Column="40" TopLine="31"/>
+      </Position>
+      <Position>
+        <Filename Value="gizmocalendar.pas"/>
+        <Caret Line="90" Column="53" TopLine="74"/>
+      </Position>
+      <Position>
+        <Filename Value="testform.pas"/>
+        <Caret Line="29" Column="16" TopLine="3"/>
+      </Position>
+      <Position>
+        <Filename Value="testform.pas"/>
+        <Caret Line="31" Column="16" TopLine="3"/>
+      </Position>
+      <Position>
+        <Filename Value="testform.pas"/>
+        <Caret Line="42" Column="39" TopLine="16"/>
+      </Position>
+      <Position>
+        <Filename Value="testform.pas"/>
+        <Caret Line="44" Column="5" TopLine="18"/>
+      </Position>
+      <Position>
+        <Filename Value="testform.pas"/>
+        <Caret Line="42" Column="27" TopLine="20"/>
+      </Position>
+      <Position>
+        <Filename Value="testform.pas"/>
+        <Caret Line="45" Column="18" TopLine="21"/>
       </Position>
     </JumpHistory>
     <RunParams>

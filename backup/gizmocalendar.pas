@@ -6,11 +6,11 @@ interface
 
 uses
   Classes, SysUtils, LResources, Forms, Controls, Graphics, Dialogs, ExtCtrls,
-  DateUtils, Types;
+  DateUtils, Types, fgl;
 
 type
 
-  TDatesArray = array of TDateTime;
+  TDatesList = specialize TFPGList<TDateTime>;
 
   TArrowDirection = (adLeft, adRight);
 
@@ -23,7 +23,7 @@ type
 
   TGizmoCalendar = class(TCustomPanel)
   private
-    FDates: TDatesArray;
+    FDates: TDatesList;
     FMousePos : TPoint;
     FMthPrev, FMthNext: TRect;
     FOnChange: TNotifyEvent;
@@ -32,7 +32,7 @@ type
     FDate: TDateTime;
     procedure SetDate(AValue: TDateTime);
     procedure RenderArrow(ARect: TRect; ADirection: TArrowDirection);
-    procedure SetDates(AValue: TDatesArray);
+    procedure SetDates(AValue: TDatesList);
   protected
 
   public
@@ -41,11 +41,12 @@ type
     procedure MouseLeave; override;
     procedure MouseMove(Shift: TShiftState; X, Y: Integer); override;
     procedure MouseUp(Button: TMouseButton; Shift: TShiftState; X, Y: Integer); override;
-    property HighlightDates: TDatesArray read FDates write SetDates;
+    property HighlightDates: TDatesList read FDates write SetDates;
   published
     property Font;
     property Align;
     property Anchors;
+    //The current selected date;
     property Value: TDateTime read FDate write SetDate;
     property OnChange: TNotifyEvent read FOnChange write FOnChange;
   end;
@@ -86,7 +87,7 @@ begin
 
 end;
 
-procedure TGizmoCalendar.SetDates(AValue: TDatesArray);
+procedure TGizmoCalendar.SetDates(AValue: TDatesList);
 begin
   if FDates = AValue then Exit;
   FDates := AValue;
@@ -96,6 +97,8 @@ end;
 constructor TGizmoCalendar.Create(TheOwner: TComponent);
 begin
   inherited Create(TheOwner);
+
+  FDates := TDatesList.Create;
 
   Width  := 300;
   Height := 300;
@@ -189,18 +192,17 @@ begin
       else
         Canvas.Font.Color := clGrayText;
 
-      for i := low(FDates) to high(FDates) do
-        if (CompareDate(FGrid[x,y].Date, FDates[i]) = 0) then
-        begin
-          hl := TRect.Create(FGrid[x,y].Rect);
-          hl.Inflate(-3, -3);
-          Canvas.Brush.Style := bsSolid;
-          Canvas.Brush.Color := clHighlight;
-          Canvas.FillRect(hl);
-          Canvas.Font.Color := clHighlightText;
-          Canvas.Brush.Color := clDefault;
-          Canvas.Brush.Style := bsClear;
-        end;
+      if FDates.IndexOf(FGrid[x,y].Date) <> -1 then
+      begin
+        hl := TRect.Create(FGrid[x,y].Rect);
+        hl.Inflate(-3, -3);
+        Canvas.Brush.Style := bsSolid;
+        Canvas.Brush.Color := clHighlight;
+        Canvas.FillRect(hl);
+        Canvas.Font.Color := clHighlightText;
+        Canvas.Brush.Color := clDefault;
+        Canvas.Brush.Style := bsClear;
+      end;
 
       if (CompareDate(FDate, FGrid[x,y].Date) = 0) then
         Canvas.Rectangle(FGrid[x,y].Rect);
