@@ -8,14 +8,14 @@ unit gizmos;
 interface
 
 uses
-  GizmoCalendar, SimpleCard, htmlcolors, LazarusPackageIntf;
+  GizmoCalendar, gizmosimplecard, htmlcolors, LazarusPackageIntf;
 
 implementation
 
 procedure Register;
 begin
   RegisterUnit('GizmoCalendar', @GizmoCalendar.Register);
-  RegisterUnit('SimpleCard', @SimpleCard.Register);
+  RegisterUnit('gizmosimplecard', @gizmosimplecard.Register);
 end;
 
 initialization

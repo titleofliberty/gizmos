@@ -20,6 +20,10 @@
         <HasRegisterProc Value="True"/>
         <UnitName Value="SimpleCard"/>
       </Item>
+      <Item>
+        <Filename Value="htmlcolors.pas"/>
+        <UnitName Value="htmlcolors"/>
+      </Item>
     </Files>
     <RequiredPkgs>
       <Item>

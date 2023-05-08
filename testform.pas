@@ -5,9 +5,8 @@ unit testform;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, EditBtn,
-  StdCtrls, ExtCtrls, GizmoCalendar, SimpleCard, Types, Contnrs, DateUtils,
-  htmlcolors;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, StdCtrls,
+  GizmoCalendar, DateUtils;
 
 type
 
@@ -26,6 +25,8 @@ var
 implementation
 
 {$R *.lfm}
+
+{ TfrmTest }
 
 end.
 
