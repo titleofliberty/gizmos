@@ -11,7 +11,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="58"/>
+        <UsageCount Value="61"/>
       </Unit>
       <Unit>
         <Filename Value="testform.pas"/>
@@ -19,22 +19,18 @@
         <ComponentName Value="frmTest"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
-        <TopLine Value="23"/>
-        <CursorPos X="13" Y="39"/>
-        <UsageCount Value="58"/>
+        <CursorPos X="66" Y="13"/>
+        <UsageCount Value="61"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="gizmocalendar.pas"/>
         <UnitName Value="GizmoCalendar"/>
-        <EditorIndex Value="1"/>
-        <TopLine Value="170"/>
-        <CursorPos X="41" Y="195"/>
-        <FoldState Value=" T3iM06223 PiKl60j"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="178"/>
+        <CursorPos X="27" Y="187"/>
         <UsageCount Value="23"/>
-        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="../../../fpcupdeluxe/lazarus/lcl/extctrls.pp"/>
@@ -60,10 +56,9 @@
       <Unit>
         <Filename Value="gizmosimplecard.pas"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="44"/>
-        <CursorPos X="12" Y="78"/>
-        <FoldState Value=" T4602 T7EFS1 PNWL T3ic059 pk4kV044 PGP0o"/>
-        <UsageCount Value="12"/>
+        <CursorPos X="21" Y="300"/>
+        <FoldState Value=" T7EGG2 PiBi8L T3jK04C17 Pk0mX00"/>
+        <UsageCount Value="13"/>
       </Unit>
       <Unit>
         <Filename Value="../../../fpcupdeluxe/lazarus/lcl/stdctrls.pp"/>
@@ -140,87 +135,88 @@
         <CursorPos X="29" Y="106"/>
         <UsageCount Value="10"/>
       </Unit>
+      <Unit>
+        <Filename Value="gizmoborderpanel.pas"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="85"/>
+        <CursorPos X="41" Y="108"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+      </Unit>
     </Units>
-    <JumpHistory HistoryIndex="19">
+    <JumpHistory HistoryIndex="17">
       <Position>
         <Filename Value="testform.pas"/>
-        <Caret Line="34" Column="24" TopLine="10"/>
-      </Position>
-      <Position>
-        <Filename Value="testform.pas"/>
-        <Caret Line="35" Column="24" TopLine="10"/>
+        <Caret Line="14" Column="24"/>
       </Position>
       <Position>
         <Filename Value="testform.pas"/>
-        <Caret Line="34" Column="24" TopLine="9"/>
+        <Caret Line="14" Column="24"/>
       </Position>
       <Position>
         <Filename Value="testform.pas"/>
-        <Caret Line="36" Column="24" TopLine="9"/>
+        <Caret Line="9" Column="25"/>
       </Position>
       <Position>
         <Filename Value="testform.pas"/>
-        <Caret Line="41" Column="44" TopLine="17"/>
+        <Caret Line="14" Column="27"/>
+      </Position>
+      <Position>
+        <Filename Value="gizmoborderpanel.pas"/>
+        <Caret Line="20" Column="26"/>
+      </Position>
+      <Position>
+        <Filename Value="gizmoborderpanel.pas"/>
+        <Caret Line="33" Column="22" TopLine="17"/>
+      </Position>
+      <Position>
+        <Filename Value="gizmoborderpanel.pas"/>
+        <Caret Line="101" Column="34" TopLine="71"/>
+      </Position>
+      <Position>
+        <Filename Value="gizmoborderpanel.pas"/>
+        <Caret Line="97" Column="37" TopLine="73"/>
+      </Position>
+      <Position>
+        <Filename Value="gizmoborderpanel.pas"/>
+        <Caret Line="60" Column="10" TopLine="43"/>
       </Position>
       <Position>
         <Filename Value="testform.pas"/>
-        <Caret Line="41" Column="43" TopLine="17"/>
+        <Caret Line="14" Column="27"/>
       </Position>
       <Position>
         <Filename Value="testform.pas"/>
-        <Caret Line="46" Column="50" TopLine="21"/>
+        <Caret Line="11" Column="40"/>
+      </Position>
+      <Position>
+        <Filename Value="gizmoborderpanel.pas"/>
+        <Caret Line="29" Column="53" TopLine="11"/>
+      </Position>
+      <Position>
+        <Filename Value="gizmoborderpanel.pas"/>
+        <Caret Line="100" Column="24" TopLine="74"/>
       </Position>
       <Position>
         <Filename Value="testform.pas"/>
-        <Caret Line="41" Column="15" TopLine="22"/>
+        <Caret Line="17" Column="50"/>
       </Position>
       <Position>
         <Filename Value="testform.pas"/>
-        <Caret Line="30" Column="16" TopLine="4"/>
+        <Caret Line="16" Column="50"/>
       </Position>
       <Position>
         <Filename Value="testform.pas"/>
-        <Caret Line="29" Column="16" TopLine="3"/>
-      </Position>
-      <Position>
-        <Filename Value="gizmocalendar.pas"/>
-        <Caret Line="26" Column="23" TopLine="13"/>
-      </Position>
-      <Position>
-        <Filename Value="gizmocalendar.pas"/>
-        <Caret Line="35" Column="42" TopLine="21"/>
-      </Position>
-      <Position>
-        <Filename Value="gizmocalendar.pas"/>
-        <Caret Line="44" Column="40" TopLine="31"/>
-      </Position>
-      <Position>
-        <Filename Value="gizmocalendar.pas"/>
-        <Caret Line="90" Column="53" TopLine="74"/>
+        <Caret Line="9" Column="43"/>
       </Position>
       <Position>
         <Filename Value="testform.pas"/>
-        <Caret Line="29" Column="16" TopLine="3"/>
+        <Caret Line="12" Column="41"/>
       </Position>
       <Position>
-        <Filename Value="testform.pas"/>
-        <Caret Line="31" Column="16" TopLine="3"/>
-      </Position>
-      <Position>
-        <Filename Value="testform.pas"/>
-        <Caret Line="42" Column="39" TopLine="16"/>
-      </Position>
-      <Position>
-        <Filename Value="testform.pas"/>
-        <Caret Line="44" Column="5" TopLine="18"/>
-      </Position>
-      <Position>
-        <Filename Value="testform.pas"/>
-        <Caret Line="42" Column="27" TopLine="20"/>
-      </Position>
-      <Position>
-        <Filename Value="testform.pas"/>
-        <Caret Line="45" Column="18" TopLine="21"/>
+        <Filename Value="gizmoborderpanel.pas"/>
+        <Caret Line="36" Column="78" TopLine="21"/>
       </Position>
     </JumpHistory>
     <RunParams>

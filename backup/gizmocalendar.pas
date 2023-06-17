@@ -103,7 +103,7 @@ begin
   Width  := 300;
   Height := 300;
 
-  SetDate(Now());
+  SetDate(Date());
   Self.Caption := '';
 end;
 

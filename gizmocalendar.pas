@@ -180,9 +180,11 @@ begin
 
       if PtInRect(FGrid[x,y].Rect, FMousePos) then
       begin
+        hl := TRect.Create(FGrid[x,y].Rect);
+        hl.Inflate(-3, -3);
         Canvas.Brush.Style := bsSolid;
         Canvas.Brush.Color := clHighlight;
-        Canvas.FillRect(FGrid[x,y].Rect);
+        Canvas.FillRect(hl);
         Canvas.Font.Color := clHighlightText;
         Canvas.Brush.Color := clDefault;
         Canvas.Brush.Style := bsClear;

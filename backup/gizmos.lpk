@@ -16,9 +16,9 @@
         <UnitName Value="GizmoCalendar"/>
       </Item>
       <Item>
-        <Filename Value="simplecard.pas"/>
+        <Filename Value="gizmosimplecard.pas"/>
         <HasRegisterProc Value="True"/>
-        <UnitName Value="SimpleCard"/>
+        <UnitName Value="gizmosimplecard"/>
       </Item>
       <Item>
         <Filename Value="htmlcolors.pas"/>
