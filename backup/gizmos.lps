@@ -19,6 +19,7 @@
         <ComponentName Value="frmTest"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
         <CursorPos X="66" Y="13"/>
         <UsageCount Value="61"/>
         <Loaded Value="True"/>
@@ -137,7 +138,6 @@
       </Unit>
       <Unit>
         <Filename Value="gizmoborderpanel.pas"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <TopLine Value="85"/>
         <CursorPos X="41" Y="108"/>
@@ -145,7 +145,7 @@
         <Loaded Value="True"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="17">
+    <JumpHistory HistoryIndex="18">
       <Position>
         <Filename Value="testform.pas"/>
         <Caret Line="14" Column="24"/>
@@ -217,6 +217,10 @@
       <Position>
         <Filename Value="gizmoborderpanel.pas"/>
         <Caret Line="36" Column="78" TopLine="21"/>
+      </Position>
+      <Position>
+        <Filename Value="testform.pas"/>
+        <Caret Line="13" Column="66"/>
       </Position>
     </JumpHistory>
     <RunParams>

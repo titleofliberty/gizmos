@@ -4,20 +4,5 @@ object frmTest: TfrmTest
   Top = 170
   Width = 752
   Caption = 'Gizmos Test Form'
-  ClientHeight = 544
-  ClientWidth = 752
   LCLVersion = '2.2.6.0'
-  object BorderPanel1: TBorderPanel
-    Left = 126
-    Height = 230
-    Top = 119
-    Width = 378
-    BevelOuter = bvNone
-    BorderWidth = 8
-    BorderStyle = psSolid
-    Caption = 'BorderPanel1'
-    TabOrder = 0
-    BorderRadius = 0
-    BorderColor = clHighlight
-  end
 end

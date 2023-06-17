@@ -13,7 +13,6 @@ type
   { TfrmTest }
 
   TfrmTest = class(TForm)
-    BorderPanel1: TBorderPanel;
   private
 
   public
