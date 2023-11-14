@@ -5,14 +5,14 @@ unit testform;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls,
-  gizmosimplecard, gizmoborderpanel, DateUtils;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, GizmosLblCbo;
 
 type
 
   { TfrmTest }
 
   TfrmTest = class(TForm)
+    GizmosLblCbo1: TGizmosLblCbo;
   private
 
   public

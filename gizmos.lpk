@@ -29,6 +29,11 @@
         <HasRegisterProc Value="True"/>
         <UnitName Value="gizmoborderpanel"/>
       </Item>
+      <Item>
+        <Filename Value="gizmoslblcbo.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="GizmosLblCbo"/>
+      </Item>
     </Files>
     <RequiredPkgs>
       <Item>

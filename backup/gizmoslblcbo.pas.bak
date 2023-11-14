@@ -1,0 +1,57 @@
+unit GizmosLblCbo;
+
+{$mode ObjFPC}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils, LResources, Forms, Controls, Graphics, Dialogs, StdCtrls,
+  ExtCtrls;
+
+type
+
+  { TGizmosLblCbo }
+
+  TGizmosLblCbo = class(TCustomPanel)
+  private
+    FLbl: TLabel;
+    FCbo: TComboBox;
+  protected
+
+  public
+    constructor Create(TheOwner: TComponent); override;
+  published
+    property Lbl: TLabel read FLbl write FLbl;
+    property Cbo: TComboBox read FCbo write FCbo;
+  end;
+
+procedure Register;
+
+implementation
+
+procedure Register;
+begin
+  RegisterComponents('Gizmos',[TGizmosLblCbo]);
+end;
+
+{ TGizmosLblCbo }
+
+constructor TGizmosLblCbo.Create(TheOwner: TComponent);
+begin
+  inherited Create(TheOwner);
+
+  Self.ChildSizing.VerticalSpacing := 8;
+  Self.BorderStyle := bsNone;
+  Self.BevelOuter := bvNone;
+
+  FLbl := TLabel.Create(Self);
+  FLbl.Parent := Self;
+  FLbl.Align := alClient;
+  FLbl.Layout := tlCenter;
+
+  FCbo := TComboBox.Create(Self);
+  FCbo.Parent := Self;
+  FCbo.Align := alBottom;
+end;
+
+end.

@@ -5,8 +5,7 @@ unit testform;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls,
-  gizmosimplecard, gizmoborderpanel, DateUtils;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, GizmosLblCbo;
 
 type
 

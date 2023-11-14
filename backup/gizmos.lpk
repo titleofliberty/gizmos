@@ -24,6 +24,11 @@
         <Filename Value="htmlcolors.pas"/>
         <UnitName Value="htmlcolors"/>
       </Item>
+      <Item>
+        <Filename Value="gizmoborderpanel.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="gizmoborderpanel"/>
+      </Item>
     </Files>
     <RequiredPkgs>
       <Item>
