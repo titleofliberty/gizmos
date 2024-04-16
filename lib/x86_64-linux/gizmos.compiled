@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
-  <Compiler Value="/home/marion/fpcupdeluxe/fpc/bin/x86_64-linux/fpc.sh" Date="1682338953"/>
-  <Params Value=" -MObjFPC -Scghi -Cg -O1 -g -gl -l -vewnhibq -Fu/home/marion/fpcupdeluxe/lazarus/packager/units/x86_64-linux -Fu/home/marion/fpcupdeluxe/lazarus/components/lazutils/lib/x86_64-linux -Fu/home/marion/fpcupdeluxe/lazarus/components/freetype/lib/x86_64-linux -Fu/home/marion/fpcupdeluxe/lazarus/lcl/units/x86_64-linux -Fu/home/marion/fpcupdeluxe/lazarus/lcl/units/x86_64-linux/gtk2 -Fu/home/marion/Documents/Github/gizmos/ -FU/home/marion/Documents/Github/gizmos/lib/x86_64-linux/ -dLCL -dLCLgtk2 gizmos.pas"/>
+  <Lazarus Version="3.2"/>
+  <Compiler Value="/usr/bin/fpc" Date="1625802185"/>
+  <Params Value=" -MObjFPC -Scghi -Cg -O1 -g -gl -l -vewnhibq -Fu/usr/share/lazarus/3.2.0/packager/units/x86_64-linux -Fu/usr/share/lazarus/3.2.0/components/lazutils/lib/x86_64-linux -Fu/usr/share/lazarus/3.2.0/components/freetype/lib/x86_64-linux -Fu/usr/share/lazarus/3.2.0/lcl/units/x86_64-linux -Fu/usr/share/lazarus/3.2.0/lcl/units/x86_64-linux/gtk2 -Fu/home/marion/Documents/GitHub/gizmos/ -FU/home/marion/Documents/GitHub/gizmos/lib/x86_64-linux/ -dLCL -dLCLgtk2 gizmos.pas"/>
 </CONFIG>

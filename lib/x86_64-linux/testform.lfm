@@ -1,8 +1,0 @@
-object frmTest: TfrmTest
-  Left = 376
-  Height = 544
-  Top = 170
-  Width = 752
-  Caption = 'Gizmos Test Form'
-  LCLVersion = '2.2.6.0'
-end
